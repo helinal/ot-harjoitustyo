@@ -1,0 +1,113 @@
+commit f60ba47585e363b4903f8f080339638f3c8d5bf4
+Author: Helinä Lähteenmäki <helina.lahteenmaki@helsinki.fi>
+Date:   Thu Mar 18 17:33:57 2021 +0200
+
+    harjoittelua
+
+ tiedostoja/file2             | 0
+ tiedostoja/{file1 => file22} | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 565490cd124b8b174e25737ee92dda6e8551caf3
+Author: Helinä Lähteenmäki <helina.lahteenmaki@helsinki.fi>
+Date:   Thu Mar 18 17:30:24 2021 +0200
+
+    files 1-3
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 27069f45d4af25b5e575ad1b05010b5505286657
+Author: Helinä Lähteenmäki <helina.lahteenmaki@helsinki.fi>
+Date:   Thu Mar 18 17:20:59 2021 +0200
+
+    git add -p
+
+ eka.txt    | 3 +++
+ kolmas.txt | 6 +++---
+ 2 files changed, 6 insertions(+), 3 deletions(-)
+
+commit d31253316a61667e4b46980b2612e3f8927521f2
+Author: Helinä Lähteenmäki <helina.lahteenmaki@helsinki.fi>
+Date:   Thu Mar 18 17:17:17 2021 +0200
+
+    uudelleennimentä
+
+ tiedosto.txt => eka.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 75a3acbe8321926921fdd35a78fb4b98adc7d09b
+Author: Helinä Lähteenmäki <helina.lahteenmaki@helsinki.fi>
+Date:   Thu Mar 18 17:15:59 2021 +0200
+
+    toinen.txt poistaminen
+
+ toinen.txt | 3 ---
+ 1 file changed, 3 deletions(-)
+
+commit 0c86d528302267ea9785baa770d0aad23ee93c07
+Author: Helinä Lähteenmäki <helina.lahteenmaki@helsinki.fi>
+Date:   Thu Mar 18 15:31:14 2021 +0200
+
+    tiedon poisto osittain
+
+ tiedosto.txt | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+commit 1f5940deea094cd0abe432cd582fefd1e2001096
+Author: Helinä Lähteenmäki <helina.lahteenmaki@helsinki.fi>
+Date:   Thu Mar 18 15:28:45 2021 +0200
+
+    tekstin lisääminen
+
+ tiedosto.txt | 14 ++++++++++++++
+ 1 file changed, 14 insertions(+)
+
+commit 16b1aa8985068dc1a4484c254f1a2e1cd1d59188
+Author: Helinä Lähteenmäki <helina.lahteenmaki@helsinki.fi>
+Date:   Thu Mar 18 15:19:34 2021 +0200
+
+    kansion lisäys
+
+ stuff/jokintiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 177d2e62e56408479c07f6dd6c0dcffc274f25a6
+Author: Helinä Lähteenmäki <helina.lahteenmaki@helsinki.fi>
+Date:   Thu Mar 18 15:16:28 2021 +0200
+
+    toisen ja kolmannen sisällön muutos
+
+ kolmas.txt | 3 +++
+ toinen.txt | 3 +++
+ 2 files changed, 6 insertions(+)
+
+commit 0a8da7911b53ecfd30a3ca9e22e806ba9fef9174
+Author: Helinä Lähteenmäki <helina.lahteenmaki@helsinki.fi>
+Date:   Thu Mar 18 15:15:10 2021 +0200
+
+    kolmannen lisäys
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 927325da11bbe7879b8f50a6b78a7b78a5b89771
+Author: Helinä Lähteenmäki <helina.lahteenmaki@helsinki.fi>
+Date:   Thu Mar 18 15:10:49 2021 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit 46ba67bc9b628777031e8b3ae796bfc3b07e346b
+Author: Helinä Lähteenmäki <helina.lahteenmaki@helsinki.fi>
+Date:   Thu Mar 18 15:05:35 2021 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
