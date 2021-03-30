@@ -12,4 +12,8 @@
 
 [testikattavuus-kuva](https://github.com/helinal/ot-harjoitustyo/blob/master/laskarit/viikko2/testikattavuusOhTe.png)
 
+[työaikakirjanpito](https://github.com/helinal/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
+
+[alustava määrittelydokumentti](https://github.com/helinal/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
+
 :)
