@@ -1,5 +1,10 @@
 ### Ohjelmointitekniikan harjoitustyö
 
+[Työaikakirjanpito](https://github.com/helinal/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
+
+[Alustava vaatimusmäärittely](https://github.com/helinal/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
+
+
 #### Tehtävät
 
 ##### Viikko 1
@@ -11,9 +16,5 @@
 ##### Viikko 2
 
 [testikattavuus-kuva](https://github.com/helinal/ot-harjoitustyo/blob/master/laskarit/viikko2/testikattavuusOhTe.png)
-
-[työaikakirjanpito](https://github.com/helinal/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
-
-[alustava määrittelydokumentti](https://github.com/helinal/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
 
 :)
