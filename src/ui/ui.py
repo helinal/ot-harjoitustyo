@@ -1,8 +1,9 @@
 from ui.login_view import LoginView
 from ui.books_view import BooksView
 
+
 class UI:
-    
+
     def __init__(self, root):
         self._root = root
         self._current_view = None
@@ -32,5 +33,3 @@ class UI:
         self._current_view = BooksView(self._root, self._show_login_view)
 
         self._current_view.pack()
-
-    

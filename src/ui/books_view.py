@@ -1,7 +1,8 @@
 from tkinter import ttk, constants
 
+
 class BooksView:
-    
+
     def __init__(self, root, books):
         self._root = root
         self._books = books
@@ -10,7 +11,8 @@ class BooksView:
         self._initialize()
 
     def _initialize(self):
-        label = ttk.Label(master=self._root, text="This is going to be the main page of the application :D")
+        label = ttk.Label(
+            master=self._root, text="This is going to be the main page of the application :D")
         label.pack()
 
     def pack(self):
