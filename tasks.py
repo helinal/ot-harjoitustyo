@@ -1,6 +1,4 @@
 from invoke import task
-from subprocess import call
-from sys import platform
 
 @task
 def start(ctx):
