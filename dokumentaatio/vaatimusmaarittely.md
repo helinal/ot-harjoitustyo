@@ -12,20 +12,20 @@ Kehityksen alkuvaiheessa vain yksi peruskäyttäjä-käyttäjärooli, kehityksen
 
 ### Ennen kirjautumista
 
-- Käyttäjä voi kirjautua sisään kirjautumislomakkeella
-  - Jos käyttäjää ei ole olemassa tai salasana ei täsmää, ilmoittaa järjestelmä tästä
-- Jos käyttäjällä ei ole vielä tunnusta, voi käyttäjä luoda uuden käyttäjätunnuksen
-  - Käyttäjätunnuksen täytyy olla uniikki ja pituudeltaan vähintään 3 merkkiä
+- Käyttäjä voi kirjautua sisään kirjautumislomakkeella (**Tehty**)
+  - Jos käyttäjää ei ole olemassa tai salasana ei täsmää, ilmoittaa järjestelmä tästä (**Tehty**)
+- Jos käyttäjällä ei ole vielä tunnusta, voi käyttäjä luoda uuden käyttäjätunnuksen (**Tehty**)
+  - Käyttäjätunnuksen täytyy olla uniikki ja pituudeltaan vähintään 3 merkkiä (**Tehty**)
 
 ### Kirjautumisen jälkeen
 
-- Käyttäjä näkee etusivulla omat kirjalistansa:
+- Käyttäjä näkee etusivulla omat kirjalistansa: (**Osittain tehty**, vain yksi lista tällä hetkellä)
   - kirjat, jotka käyttäjä haluaa lukea
   - kirjat, joita käyttäjä lukee tällä hetkellä
   - kirjat, jotka käyttäjä on jo lukenut
-- Käyttäjä voi lisätä uuden kirjan johonkin kolmesta listasta
+- Käyttäjä voi lisätä uuden kirjan johonkin kolmesta listasta (**Osittain tehty**)
 - Käyttäjä voi poistaa kirjan listasta
-- Käyttäjä voi kirjautua ulos järjestelmästä
+- Käyttäjä voi kirjautua ulos järjestelmästä (**Tehty**)
 
 ## Jatkokehitysideoita
 
