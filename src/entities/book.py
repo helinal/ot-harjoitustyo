@@ -6,5 +6,3 @@ class Book:
         self.title = title
         self.user = user
         self.id = book_id or str(uuid.uuid4())
-
-# TODO: writer, genre, pages, year of publication...
