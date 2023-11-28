@@ -49,8 +49,8 @@ class BooksView:
         self._book_list_frame = ttk.Frame(master=self._frame)
 
         self._initialize_header()
-        self._initialize_book_list()
         self._initialize_footer()
+        self._initialize_book_list()
 
         self._book_list_frame.grid(
             row=1,
@@ -97,10 +97,10 @@ class BooksView:
             command=self._logout_handler
         )
 
-        user_label.grid(row=0, column=0, padx=5, pady=5, sticky=constants.W)
+        user_label.grid(row=20, column=0, padx=5, pady=5, sticky=constants.W)
 
         logout_button.grid(
-            row=0,
+            row=20,
             column=1,
             padx=5,
             pady=5,

@@ -60,6 +60,7 @@ class FakeUserRepository:
     def delete_all(self):
         self.users = []
 
+
 class TestBookService(unittest.TestCase):
     def setUp(self):
         self.book_service = BookService(

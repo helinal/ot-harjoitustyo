@@ -49,7 +49,7 @@ class LoginView:
     def _initialize_password_field(self):
         password_label = ttk.Label(master=self._frame, text="Password")
 
-        self._password_entry = ttk.Entry(master=self._frame)
+        self._password_entry = ttk.Entry(master=self._frame, show="*")
 
         password_label.grid(padx=5, pady=5, sticky=constants.W)
         self._password_entry.grid(padx=5, pady=5, sticky=constants.EW)
@@ -58,8 +58,13 @@ class LoginView:
         self._frame = ttk.Frame(master=self._root)
 
         self._welcome_label = ttk.Label(
-            master=self._frame, text="Welcome to BookBuddy! To get started, please log in.")
+            master=self._frame, text="Welcome to BookBuddy!",
+            font=("Arial", 17))
         self._welcome_label.grid(padx=5, pady=5)
+                
+        self._login_label = ttk.Label(
+            master=self._frame, text="To get started, please log in")
+        self._login_label.grid(padx=5, pady=5)
 
         self._error_variable = StringVar(self._frame)
 
