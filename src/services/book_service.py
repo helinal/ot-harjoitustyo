@@ -33,6 +33,14 @@ class BookService:
 
         return self._book_repository.create(book)
 
+    def get_books(self):
+        if not self._user:
+            return []
+
+        books = self._book_repository.find_by_username(self._user.username)
+
+        return list(books)
+
     def login(self, username, password):
         user = self._user_repository.find_by_username(username)
 
@@ -42,7 +50,7 @@ class BookService:
         self._user = user
 
         return user
-    
+
     def logout(self):
         self._user = None
 

@@ -28,7 +28,7 @@ class CreateUserView:
         if len(username) == 0 or len(password) == 0:
             self._show_error("Username and password is required")
             return
-        
+
         if len(username) < 3:
             self._show_error("Username must be at least 3 characters long")
             return
