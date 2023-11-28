@@ -1,5 +1,6 @@
 from ui.login_view import LoginView
 from ui.books_view import BooksView
+from ui.create_user_view import CreateUserView
 
 
 class UI:
@@ -17,6 +18,7 @@ class UI:
         self._current_view = LoginView(
             self._root,
             self._show_books_view,
+            self._show_create_user_view
         )
 
         self._current_view.pack()
@@ -31,5 +33,16 @@ class UI:
         self._hide_current_view()
 
         self._current_view = BooksView(self._root, self._show_login_view)
+
+        self._current_view.pack()
+
+    def _show_create_user_view(self):
+        self._hide_current_view()
+
+        self._current_view = CreateUserView(
+            self._root,
+            self._show_books_view,
+            self._show_login_view
+        )
 
         self._current_view.pack()
