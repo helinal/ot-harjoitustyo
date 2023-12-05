@@ -19,11 +19,11 @@ Kehityksen alkuvaiheessa vain yksi peruskäyttäjä-käyttäjärooli, kehityksen
 
 ### Kirjautumisen jälkeen
 
-- Käyttäjä näkee etusivulla omat kirjalistansa: (**Osittain tehty**, vain yksi lista tällä hetkellä)
-  - kirjat, jotka käyttäjä haluaa lukea
-  - kirjat, joita käyttäjä lukee tällä hetkellä
-  - kirjat, jotka käyttäjä on jo lukenut
-- Käyttäjä voi lisätä uuden kirjan johonkin kolmesta listasta (**Osittain tehty**)
+- Käyttäjä näkee etusivulla omat kirjalistansa: (**Tehty**)
+  - kirjat, jotka käyttäjä haluaa lukea (**Tehty**)
+  - kirjat, joita käyttäjä lukee tällä hetkellä (**Tehty**)
+  - kirjat, jotka käyttäjä on jo lukenut (**Tehty**)
+- Käyttäjä voi lisätä uuden kirjan johonkin kolmesta listasta (**Tehty**)
 - Käyttäjä voi poistaa kirjan listasta
 - Käyttäjä voi kirjautua ulos järjestelmästä (**Tehty**)
 
