@@ -1,5 +1,7 @@
 # Ohjelmistotekniikka, harjoitustyö
 
+> Sovelluksen etusivun ulkonäkö on vielä työn alla - lopullinen sovelluksen etusivu tulee siis toivon mukaan olemaan käytettävyyden ja ulkonäön puolesta huomattavasti parempi
+
 Sovellus on ns. "virtuaalinen kirjahylly". Sovelluksen avulla siis on mahdollista pitää kirjaa luetuista, tällä hetkellä luettavista sekä vielä lukemattomista kirjoista. Sovellusta on mahdollista käyttää useampi käyttäjä, joilla kaikilla on omat kirjahyllynsä sekä kirjansa. Tarkempi kuvaus löytyy vaatimusmäärittelystä.
 
 ## Dokumentaatio
