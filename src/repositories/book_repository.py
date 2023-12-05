@@ -1,6 +1,5 @@
 from pathlib import Path
 from entities.book import Book
-from entities.bookshelf import Bookshelf
 from repositories.user_repository import user_repository
 from config import BOOKS_FILE_PATH
 
