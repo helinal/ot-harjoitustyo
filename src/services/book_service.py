@@ -1,5 +1,6 @@
 from entities.book import Book
 from entities.user import User
+from entities.bookshelf import Bookshelf
 
 from repositories.book_repository import (
     book_repository as default_book_repository
@@ -28,8 +29,11 @@ class BookService:
         self._book_repository = book_repository
         self._user_repository = user_repository
 
-    def create_book(self, title):
-        book = Book(title=title, user=self._user)
+    def create_book(self, title, bookshelf):
+        if not bookshelf:
+            raise InvalidCredentialsError("Please choose a shelf for the book")
+        
+        book = Book(title=title, user=self._user, bookshelf=bookshelf)
 
         return self._book_repository.create(book)
 

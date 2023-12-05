@@ -1,5 +1,6 @@
 from pathlib import Path
 from entities.book import Book
+from entities.bookshelf import Bookshelf
 from repositories.user_repository import user_repository
 from config import BOOKS_FILE_PATH
 
@@ -53,13 +54,14 @@ class BookRepository:
 
                 book_id = parts[0]
                 title = parts[1]
-                username = parts[2]
+                shelf = parts[2]
+                username = parts[3]
 
                 user = user_repository.find_by_username(
                     username) if username else None
 
                 books.append(
-                    Book(title, user, book_id)
+                    Book(title, shelf, user, book_id)
                 )
 
         return books
@@ -71,7 +73,7 @@ class BookRepository:
             for book in books:
                 username = book.user.username if book.user else ""
 
-                row = f"{book.id};{book.title};{username}"
+                row = f"{book.id};{book.title};{book.bookshelf};{username}"
 
                 file.write(row+"\n")
 
