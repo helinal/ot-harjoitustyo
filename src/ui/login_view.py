@@ -61,7 +61,7 @@ class LoginView:
             master=self._frame, text="Welcome to BookBuddy!",
             font=("Arial", 17))
         self._welcome_label.grid(padx=5, pady=5)
-                
+
         self._login_label = ttk.Label(
             master=self._frame, text="To get started, please log in")
         self._login_label.grid(padx=5, pady=5)
