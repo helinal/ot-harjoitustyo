@@ -14,3 +14,10 @@
 - Käyttäjä näkee vain omat kirjansa etusivulla
 - Testattu, että UserRepository- sekä TodoService-luokat toimivat käyttäjän luonnin sekä kirjautumisen osalta
 - Testattu, että uuden kirjan luominen onnistuu
+
+## Viikko 5
+
+- Lisätty "kirjahyllyt", eli listat, joihin käyttäjät voivat lajitella lisättyjä kirjoja (want to read, reading, read)
+- Lisätty mahdollisuus valita, mihin kirjahyllyyn kirja laitetaan kirjaa luodessa
+- Hiottu sovelluksen pääsivun ulkonäköä (vielä tosin kesken)
+- Testattu, että BookRepository-luokka toimii oletetusti 
