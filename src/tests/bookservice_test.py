@@ -119,9 +119,10 @@ class TestBookService(unittest.TestCase):
     def test_create_new_book(self):
         self.login(self.user_nalle)
 
-        self.book_service.create_book("paras kirja")
+        self.book_service.create_book("paras kirja", 1)
         books = self.book_service.get_books()
 
         self.assertEqual(len(books), 1)
         self.assertEqual(books[0].title, 'paras kirja')
+        self.assertEqual(books[0].bookshelf, 1)
         self.assertEqual(books[0].user.username, self.user_nalle.username)
