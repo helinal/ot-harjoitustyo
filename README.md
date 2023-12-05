@@ -29,7 +29,7 @@ Suorita sitten vaadittavat alustustoimenpiteet
 poetry run invoke build
 ```
 
-Lopuksi,käynnistä sovellus komennolla
+Lopuksi käynnistä sovellus komennolla
 
 ```bash
 poetry run invoke start
