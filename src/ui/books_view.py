@@ -172,7 +172,8 @@ class BooksView:
             text="have already read",
             font='Helvetica 15 bold'
         )
-        want_to_read_label.grid(row=0, column=0, padx=3, pady=3, sticky=constants.W)
+        want_to_read_label.grid(row=0, column=0, padx=3,
+                                pady=3, sticky=constants.W)
         reading_label.grid(row=0, column=1, padx=3, pady=3, sticky=constants.W)
         read_label.grid(row=0, column=2, padx=3, pady=3, sticky=constants.W)
 
