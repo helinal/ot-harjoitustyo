@@ -3,4 +3,7 @@ __pycache__
 .coverage
 htmlcov
 
-data/*
+data/database.sqlite
+data/books.csv
+data/test-database.sqlite
+data/test-books.csv
