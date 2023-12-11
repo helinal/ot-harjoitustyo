@@ -23,7 +23,8 @@ class BookListView:
         label.grid(row=0, column=0, padx=3, pady=3, sticky=constants.W)
 
         button_style = ttk.Style()
-        button_style.configure("Delete.TButton", font=("Helvetica", 8) , padding=(0, 0))
+        button_style.configure("Delete.TButton", font=(
+            "Helvetica", 8), padding=(0, 0))
 
         delete_button = ttk.Button(
             master=item_frame,
@@ -47,7 +48,6 @@ class BookListView:
 
         for book in new_books:
             self._initialize_book(book)
-
 
     def _initialize(self):
         self._frame = ttk.Frame(master=self._root)
@@ -121,7 +121,8 @@ class BooksView:
 
         # Create new instances of BookListView
         self._want_book_list = BookListView(self._want_list_frame, want_books)
-        self._reading_book_list = BookListView(self._reading_list_frame, reading_books)
+        self._reading_book_list = BookListView(
+            self._reading_list_frame, reading_books)
         self._read_book_list = BookListView(self._read_list_frame, read_books)
 
         self._want_book_list.pack()
@@ -227,8 +228,10 @@ class BooksView:
             command=lambda: self._set_selected_shelf(var.get())
         )
 
-        create_wantto.grid(row=4, column=0, padx=1, pady=1, sticky=constants.EW)
-        create_reading.grid(row=4, column=1, padx=1, pady=1, sticky=constants.EW)
+        create_wantto.grid(row=4, column=0, padx=1,
+                           pady=1, sticky=constants.EW)
+        create_reading.grid(row=4, column=1, padx=1,
+                            pady=1, sticky=constants.EW)
         create_read.grid(row=4, column=2, padx=1, pady=1, sticky=constants.EW)
 
     def _set_selected_shelf(self, value):

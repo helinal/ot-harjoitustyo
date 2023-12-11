@@ -11,7 +11,8 @@ class BookRepository:
     def create(self, book):
         books = self.find_all()
 
-        existing_book = next((b for b in books if b.title == book.title and b.bookshelf == book.bookshelf), None)
+        existing_book = next((b for b in books if b.title ==
+                             book.title and b.bookshelf == book.bookshelf), None)
 
         if existing_book:
             return existing_book

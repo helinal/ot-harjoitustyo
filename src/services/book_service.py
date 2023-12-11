@@ -34,7 +34,8 @@ class BookService:
             raise InvalidCredentialsError("Please choose a shelf for the book")
 
         existing_books = self._book_repository.find_all()
-        existing_book = next((b for b in existing_books if b.title == title and b.bookshelf == bookshelf), None)
+        existing_book = next(
+            (b for b in existing_books if b.title == title and b.bookshelf == bookshelf), None)
 
         if existing_book:
             return existing_book
@@ -49,7 +50,7 @@ class BookService:
         books = self._book_repository.find_by_username(self._user.username)
 
         return list(books)
-    
+
     def delete_book(self, book_id):
         self._book_repository.delete(book_id)
 
