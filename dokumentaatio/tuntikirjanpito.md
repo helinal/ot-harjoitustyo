@@ -9,4 +9,5 @@
 | 28.11. | 3    | Uuden kirjan lisäämisen ja kirjojen listauksen toteutus, sovelluksen käyttöliittymän hiominen, testien teko, dokumentoinnin päivitys ja luokkakaavion luominen |
 | 3.12.  | 2    | Eri kirjahyllyjen toteutuksen aloitus, Tkinterin opettelu radiobuttonin jne. osalta |
 | 5.12   | 5    | Kirjahyllyjen toteutuksen viimeistely, sovelluksen ulkonäön hiominen, testien teko BookRepository-luokalle, dokumentoinnin päivitys, sekvenssikaavion luominen| 
-| yht    | 19,5 | | 
+| 11.12. | 4,5  | Kirjojen poistamistoiminnon toteutus, tkinterin kanssa tuskailu ja sovelluksen ulkonäön muokkaus, kirjojen lisäämiseen liittyvän bugin korjaus, dokumentaation päivitys |
+| yht    | 24   | | 
