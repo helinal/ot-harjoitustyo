@@ -24,13 +24,12 @@ Kehityksen alkuvaiheessa vain yksi peruskäyttäjä-käyttäjärooli, kehityksen
   - kirjat, joita käyttäjä lukee tällä hetkellä (**Tehty**)
   - kirjat, jotka käyttäjä on jo lukenut (**Tehty**)
 - Käyttäjä voi lisätä uuden kirjan johonkin kolmesta listasta (**Tehty**)
-- Käyttäjä voi poistaa kirjan listasta
+- Käyttäjä voi poistaa kirjan listasta (**Tehty**)
 - Käyttäjä voi kirjautua ulos järjestelmästä (**Tehty**)
 
 ## Jatkokehitysideoita
 
+- Kirjan siirto listasta toiseen, esim. lukemassa -> luettu
 - Kirjojen haku hakusanan, genren, kirjailijan jne. avulla
 - Kirjalistan tai -listojen järjestely esim. tärkeysjärjestyksen mukaan
-- Kirjan siirto listasta toiseen, esim. lukemassa -> luettu
-- Jo luetun kirjan arvostelu ja kommentointi
 - Käyttäjätunnusten poisto
