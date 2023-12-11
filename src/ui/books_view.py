@@ -38,17 +38,16 @@ class BookListView:
 
     def _delete_book(self, book):
         book_service.delete_book(book.id)
-
         self._books.remove(book)
+        self._update_books(self._books)
 
-        self._update_books()
-
-    def _update_books(self):
+    def _update_books(self, new_books):
         for widget in self._frame.winfo_children():
             widget.destroy()
 
-        for book in self._books:
+        for book in new_books:
             self._initialize_book(book)
+
 
     def _initialize(self):
         self._frame = ttk.Frame(master=self._root)
@@ -104,44 +103,32 @@ class BooksView:
         self._handle_logout()
 
     def _initialize_book_list(self):
-        if self._want_book_list:
-            self._want_book_list.destroy()
-        elif self._reading_book_list:
-            self._reading_book_list.destroy()
-        elif self._read_book_list:
-            self._read_book_list.destroy()
-
         books = book_service.get_books()
-        want_books = []
-        reading_books = []
-        read_books = []
 
-        for book in books:
-            shelf = int(book.bookshelf)
+        want_books = [book for book in books if int(book.bookshelf) == 1]
+        reading_books = [book for book in books if int(book.bookshelf) == 2]
+        read_books = [book for book in books if int(book.bookshelf) == 3]
 
-            if shelf == 1:
-                want_books.append(book)
-            elif shelf == 2:
-                reading_books.append(book)
-            else:
-                read_books.append(book)
+        # Destroy existing widgets in frames
+        for widget in self._want_list_frame.winfo_children():
+            widget.destroy()
 
-        self._want_book_list = BookListView(
-            self._want_list_frame,
-            want_books
-        )
-        self._reading_book_list = BookListView(
-            self._reading_list_frame,
-            reading_books
-        )
-        self._read_book_list = BookListView(
-            self._read_list_frame,
-            read_books
-        )
+        for widget in self._reading_list_frame.winfo_children():
+            widget.destroy()
+
+        for widget in self._read_list_frame.winfo_children():
+            widget.destroy()
+
+        # Create new instances of BookListView
+        self._want_book_list = BookListView(self._want_list_frame, want_books)
+        self._reading_book_list = BookListView(self._reading_list_frame, reading_books)
+        self._read_book_list = BookListView(self._read_list_frame, read_books)
 
         self._want_book_list.pack()
         self._reading_book_list.pack()
         self._read_book_list.pack()
+
+        self._frame.update_idletasks()
 
     def _initialize_loggedin(self):
         user_label = ttk.Label(
