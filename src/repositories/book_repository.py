@@ -35,9 +35,9 @@ class BookRepository:
     def delete(self, book_id):
         books = self.find_all()
 
-        books_without_id = filter(lambda book: book.id != book_id, books)
+        updated_books = [book for book in books if book.id != book_id]
 
-        self._write(books_without_id)
+        self._write(updated_books)
 
     def delete_all(self):
         self._write([])

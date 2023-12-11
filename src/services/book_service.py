@@ -49,6 +49,9 @@ class BookService:
         books = self._book_repository.find_by_username(self._user.username)
 
         return list(books)
+    
+    def delete_book(self, book_id):
+        self._book_repository.delete(book_id)
 
     def login(self, username, password):
         user = self._user_repository.find_by_username(username)

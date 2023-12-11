@@ -37,8 +37,18 @@ class BookListView:
         item_frame.pack(fill=constants.X)
 
     def _delete_book(self, book):
-        # Implement your book deletion logic here
-        print(f"Deleting book: {book.title}")
+        book_service.delete_book(book.id)
+
+        self._books.remove(book)
+
+        self._update_books()
+
+    def _update_books(self):
+        for widget in self._frame.winfo_children():
+            widget.destroy()
+
+        for book in self._books:
+            self._initialize_book(book)
 
     def _initialize(self):
         self._frame = ttk.Frame(master=self._root)
