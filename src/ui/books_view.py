@@ -1,5 +1,4 @@
-from tkinter import ttk, constants
-from tkinter import IntVar
+from tkinter import ttk, constants, StringVar
 from services.book_service import book_service
 
 
@@ -12,22 +11,37 @@ class BookListView:
         self._initialize()
 
     def pack(self):
-        self._frame.pack(fill=constants.X)
+        self._frame.pack()
 
     def destroy(self):
         self._frame.destroy()
 
     def _initialize_book(self, book):
         item_frame = ttk.Frame(master=self._frame)
-        label = ttk.Label(master=item_frame, text=book.title)
 
-        label.grid(row=0, padx=3, pady=3)
+        label = ttk.Label(master=item_frame, text=book.title)
+        label.grid(row=0, column=0, padx=3, pady=3, sticky=constants.W)
+
+        button_style = ttk.Style()
+        button_style.configure("Delete.TButton", font=("Helvetica", 8) , padding=(0, 0))
+
+        delete_button = ttk.Button(
+            master=item_frame,
+            text="Delete",
+            command=lambda: self._delete_book(book),
+            style="Delete.TButton"
+        )
+
+        delete_button.grid(row=0, column=1, padx=3, pady=3, sticky=constants.W)
 
         item_frame.pack(fill=constants.X)
 
+    def _delete_book(self, book):
+        # Implement your book deletion logic here
+        print(f"Deleting book: {book.title}")
+
     def _initialize(self):
         self._frame = ttk.Frame(master=self._root)
-        # self._frame.grid(row=0, column=0, padx=10, pady=10)
 
         for book in self._books:
             self._initialize_book(book)
@@ -61,28 +75,13 @@ class BooksView:
         self._initialize_book_list()
         self._initialize_headers()
 
-        self._want_list_frame.grid(
-            row=1,
-            column=0,
-            columnspan=2,
-            sticky=constants.EW
-        )
-        self._reading_list_frame.grid(
-            row=1,
-            column=1,
-            columnspan=2,
-            sticky=constants.EW
-        )
-        self._read_list_frame.grid(
-            row=1,
-            column=2,
-            columnspan=2,
-            sticky=constants.EW
-        )
+        self._want_list_frame.grid(row=2, column=0, sticky=constants.EW)
+        self._reading_list_frame.grid(row=2, column=1, sticky=constants.EW)
+        self._read_list_frame.grid(row=2, column=2, sticky=constants.EW)
 
-        self._frame.grid_columnconfigure(0, weight=1, minsize=100)
-        self._frame.grid_columnconfigure(1, weight=0, minsize=100)
-        self._frame.grid_columnconfigure(2, weight=0, minsize=100)
+        self._frame.grid_columnconfigure(0, weight=1)
+        self._frame.grid_columnconfigure(1, weight=0)
+        self._frame.grid_columnconfigure(2, weight=0)
 
     def pack(self):
         self._frame.pack(fill=constants.X)
@@ -146,36 +145,37 @@ class BooksView:
             command=self._logout_handler
         )
         user_label.grid_columnconfigure(0, weight=1, minsize=100)
-        user_label.grid(row=4, column=2, padx=3, pady=3, sticky=constants.EW)
+        user_label.grid(row=4, column=3, padx=3, pady=3, sticky=constants.EW)
 
         logout_button.grid(
             row=3,
-            column=2,
-            padx=5,
-            pady=5,
-            sticky=constants.EW
+            column=3,
+            padx=10,
+            pady=10,
+            sticky=constants.E
         )
 
     def _initialize_headers(self):
         want_to_read_label = ttk.Label(
             master=self._frame,
-            text="want to read",
-            font='Helvetica 15 bold'
+            text="Want to read",
+            font='Helvetica 13 bold'
         )
         reading_label = ttk.Label(
             master=self._frame,
-            text="reading now",
-            font='Helvetica 15 bold'
+            text="Reading now",
+            font='Helvetica 13 bold'
         )
         read_label = ttk.Label(
             master=self._frame,
-            text="have already read",
-            font='Helvetica 15 bold'
+            text="Have already read",
+            font='Helvetica 13 bold'
         )
-        want_to_read_label.grid(row=0, column=0, padx=3,
+
+        want_to_read_label.grid(row=1, column=0, padx=3,
                                 pady=3, sticky=constants.W)
-        reading_label.grid(row=0, column=1, padx=3, pady=3, sticky=constants.W)
-        read_label.grid(row=0, column=2, padx=3, pady=3, sticky=constants.W)
+        reading_label.grid(row=1, column=1, padx=3, pady=3, sticky=constants.W)
+        read_label.grid(row=1, column=2, padx=3, pady=3, sticky=constants.W)
 
     def _initialize_bookshelves(self):
         self._create_book_entry = ttk.Entry(master=self._frame)
@@ -183,85 +183,65 @@ class BooksView:
         create_book_button = ttk.Button(
             master=self._frame,
             text="Add a new book",
-            command=self._handle_create_book
+            command=self._handle_create_book,
+            style='AddBook.TButton'
         )
 
         self._create_book_entry.grid(
             row=3,
             column=0,
-            padx=5,
-            pady=5,
+            columnspan=2,
+            padx=10,
+            pady=10,
             sticky=constants.EW,
         )
 
-        self._create_book_entry.grid_columnconfigure(0, weight=1, minsize=100)
-
         create_book_button.grid(
             row=3,
-            column=1,
-            padx=5,
-            pady=5,
+            column=2,
+            padx=10,
+            pady=10,
             sticky=constants.EW
         )
 
-        def selected_shelf():
-            self._selected_shelf = var.get()
-
-        var = IntVar()
+        var = StringVar()
 
         create_wantto = ttk.Radiobutton(
             master=self._frame,
-            text="want to read",
+            text="Want to Read",
             variable=var,
-            value=1,
-            command=selected_shelf
+            value="1",
+            command=lambda: self._set_selected_shelf(var.get())
         )
 
         create_reading = ttk.Radiobutton(
             master=self._frame,
-            text="reading now",
+            text="Currently Reading",
             variable=var,
-            value=2,
-            command=selected_shelf
+            value="2",
+            command=lambda: self._set_selected_shelf(var.get())
         )
 
         create_read = ttk.Radiobutton(
             master=self._frame,
-            text="have read",
+            text="Already Read",
             variable=var,
-            value=3,
-            command=selected_shelf
+            value="3",
+            command=lambda: self._set_selected_shelf(var.get())
         )
 
-        create_wantto.grid(
-            row=4,
-            column=0,
-            padx=1,
-            pady=1,
-            sticky=constants.EW
-        )
+        create_wantto.grid(row=4, column=0, padx=1, pady=1, sticky=constants.EW)
+        create_reading.grid(row=4, column=1, padx=1, pady=1, sticky=constants.EW)
+        create_read.grid(row=4, column=2, padx=1, pady=1, sticky=constants.EW)
 
-        create_reading.grid(
-            row=5,
-            column=0,
-            padx=1,
-            pady=1,
-            sticky=constants.EW
-        )
-
-        create_read.grid(
-            row=6,
-            column=0,
-            padx=1,
-            pady=1,
-            sticky=constants.EW
-        )
+    def _set_selected_shelf(self, value):
+        self._selected_shelf = value
 
     def _handle_create_book(self):
         book_title = self._create_book_entry.get()
         bookshelf = self._selected_shelf
 
-        if book_title:
+        if book_title and bookshelf:
             book_service.create_book(book_title, bookshelf)
             self._initialize_book_list()
             self._create_book_entry.delete(0, constants.END)

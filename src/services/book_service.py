@@ -29,11 +29,17 @@ class BookService:
         self._user_repository = user_repository
 
     def create_book(self, title, bookshelf):
+        print(title, bookshelf)
         if not bookshelf:
             raise InvalidCredentialsError("Please choose a shelf for the book")
 
-        book = Book(title=title, user=self._user, bookshelf=bookshelf)
+        existing_books = self._book_repository.find_all()
+        existing_book = next((b for b in existing_books if b.title == title and b.bookshelf == bookshelf), None)
 
+        if existing_book:
+            return existing_book
+
+        book = Book(title=title, user=self._user, bookshelf=bookshelf)
         return self._book_repository.create(book)
 
     def get_books(self):
