@@ -21,3 +21,8 @@
 - Lisätty mahdollisuus valita, mihin kirjahyllyyn kirja laitetaan kirjaa luodessa
 - Hiottu sovelluksen pääsivun ulkonäköä (vielä tosin kesken)
 - Testattu, että BookRepository-luokka toimii oletetusti 
+
+## Viikko 6
+
+- Käyttäjä voi poistaa kirjoja kirjahyllyistä
+- Korjattu kirjan lisääminen kirjahyllyyn - lisääminen toimii nyt oletetusti
