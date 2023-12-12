@@ -8,9 +8,10 @@ Sovellus on ns. "virtuaalinen kirjahylly". Sovelluksen avulla siis on mahdollist
 ## Dokumentaatio
 
 - [Vaatimusmäärittely](https://github.com/helinal/ot-harjoitustyo/blob/main/dokumentaatio/vaatimusmaarittely.md)
+- [Arkkitehtuurikuvaus](https://github.com/helinal/ot-harjoitustyo/blob/main/dokumentaatio/arkkitehtuuri.md)
+- [Käyttöohje](https://github.com/helinal/ot-harjoitustyo/blob/main/dokumentaatio/kayttoohje.md)
 - [Työaikakirjanpito](https://github.com/helinal/ot-harjoitustyo/blob/main/dokumentaatio/tuntikirjanpito.md)
 - [Changelog](https://github.com/helinal/ot-harjoitustyo/blob/main/dokumentaatio/changelog.md)
-- [Arkkitehtuurikuvaus](https://github.com/helinal/ot-harjoitustyo/blob/main/dokumentaatio/arkkitehtuuri.md)
 
 ## Asennus
 
