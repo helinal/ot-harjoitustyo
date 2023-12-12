@@ -2,7 +2,8 @@
 
 Sovellus on ns. "virtuaalinen kirjahylly". Sovelluksen avulla siis on mahdollista pitää kirjaa luetuista, tällä hetkellä luettavista sekä vielä lukemattomista kirjoista. Sovellusta on mahdollista käyttää useampi käyttäjä, joilla kaikilla on omat kirjahyllynsä sekä kirjansa. Tarkempi kuvaus löytyy vaatimusmäärittelystä.
 
-[Ensimmäinen release](https://github.com/helinal/ot-harjoitustyo/releases/tag/viikko5)
+- [Ensimmäinen release (vko 5)](https://github.com/helinal/ot-harjoitustyo/releases/tag/viikko5)
+- [Toinen release (vko 6)](https://github.com/helinal/ot-harjoitustyo/releases/tag/viikko6)
 
 ## Dokumentaatio
 
