@@ -26,3 +26,4 @@
 
 - Käyttäjä voi poistaa kirjoja kirjahyllyistä
 - Korjattu kirjan lisääminen kirjahyllyyn - lisääminen toimii nyt oletetusti
+- Hiottu sovelluksen pääsivun ulkonäköä
