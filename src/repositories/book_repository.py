@@ -5,10 +5,29 @@ from config import BOOKS_FILE_PATH
 
 
 class BookRepository:
+    """Kirjoihin liittyvistä tietokantaoperaatioista vastaava luokka.
+    """
+
     def __init__(self, file_path):
+        """Luokan konstruktori.
+
+        Args:
+            file_path: Polku tiedostoon, johon kirjat tallennetaan.
+        """
+
         self._file_path = file_path
 
     def create(self, book):
+        """Tallentaa uuden kirjan tietokantaan.
+
+        Args:
+            todo: Tallennettava kirja Book-oliona.
+
+        Returns:
+            Tallennettu kirja Book-oliona.
+            (Jos kirja on jo olemassa, palauttaa kyseisen jo olemassa olevan kirjan.)
+        """
+
         books = self.find_all()
 
         existing_book = next((b for b in books if b.title ==
@@ -23,9 +42,24 @@ class BookRepository:
         return book
 
     def find_all(self):
+        """Palauttaa kaikki kirjat.
+
+        Returns:
+            Palauttaa listan Book-olioita.
+        """
+
         return self._read()
 
     def find_by_username(self, username):
+        """Palauttaa käyttäjän kirjat.
+
+        Args:
+            username: Käyttäjän käyttäjätunnus, jonka kirjat palautetaan.
+
+        Returns:
+            Palauttaa listan Kirja-olioita.
+        """
+
         books = self.find_all()
 
         user_books = filter(
@@ -34,6 +68,12 @@ class BookRepository:
         return list(user_books)
 
     def delete(self, book_id):
+        """Poistaa tietyn yksittäisen kirjan.
+
+        Args:
+            book_id: Poistettavan kirjan id.
+        """
+
         books = self.find_all()
 
         updated_books = [book for book in books if book.id != book_id]
@@ -41,6 +81,9 @@ class BookRepository:
         self._write(updated_books)
 
     def delete_all(self):
+        """Poistaa kaikki kirjat.
+        """
+        
         self._write([])
 
     def _ensure_file_exists(self):
