@@ -119,7 +119,7 @@ class BookService:
         self._user = None
 
     def get_current_user(self):
-            """Paluttaa kirjautuneen käyttäjän.
+        """Paluttaa kirjautuneen käyttäjän.
 
         Returns:
             Kirjautunut käyttäjä User-oliona.

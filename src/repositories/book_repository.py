@@ -83,7 +83,7 @@ class BookRepository:
     def delete_all(self):
         """Poistaa kaikki kirjat.
         """
-        
+
         self._write([])
 
     def _ensure_file_exists(self):
