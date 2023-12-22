@@ -4,30 +4,28 @@
 
 Sovelluksen avulla käyttäjä pystyy pitämään kirjaa kirjoista, joita joko haluaisi lukea, on tällä hetkellä lukemassa tai on jo lukenut - ns. "virtuaalinen kirjahylly". Sovellusta voi käyttää useampi rekisteröitynyt käyttäjä, joilla kaikilla on omat kirjalistansa.
 
-## Käyttäjät
-
-Kehityksen alkuvaiheessa vain yksi peruskäyttäjä-käyttäjärooli, kehityksen edetessä saatetaan lisätä ns. admin-käyttäjärooli.
-
 ## Sovelluksen tarjoama toiminnallisuus
 
 ### Ennen kirjautumista
 
-- Käyttäjä voi kirjautua sisään kirjautumislomakkeella (**Tehty**)
-  - Jos käyttäjää ei ole olemassa tai salasana ei täsmää, ilmoittaa järjestelmä tästä (**Tehty**)
-- Jos käyttäjällä ei ole vielä tunnusta, voi käyttäjä luoda uuden käyttäjätunnuksen (**Tehty**)
-  - Käyttäjätunnuksen täytyy olla uniikki ja pituudeltaan vähintään 3 merkkiä (**Tehty**)
+- Käyttäjä voi kirjautua sisään kirjautumislomakkeella
+  - Jos käyttäjää ei ole olemassa tai salasana ei täsmää, ilmoittaa järjestelmä tästä
+- Jos käyttäjällä ei ole vielä tunnusta, voi käyttäjä luoda uuden käyttäjätunnuksen
+  - Käyttäjätunnuksen täytyy olla uniikki ja pituudeltaan vähintään 3 merkkiä
 
 ### Kirjautumisen jälkeen
 
-- Käyttäjä näkee etusivulla omat kirjalistansa: (**Tehty**)
-  - kirjat, jotka käyttäjä haluaa lukea (**Tehty**)
-  - kirjat, joita käyttäjä lukee tällä hetkellä (**Tehty**)
-  - kirjat, jotka käyttäjä on jo lukenut (**Tehty**)
-- Käyttäjä voi lisätä uuden kirjan johonkin kolmesta listasta (**Tehty**)
-- Käyttäjä voi poistaa kirjan listasta (**Tehty**)
-- Käyttäjä voi kirjautua ulos järjestelmästä (**Tehty**)
+- Käyttäjä näkee etusivulla omat kirjahyllynsä:
+  - kirjat, jotka käyttäjä haluaa lukea
+  - kirjat, joita käyttäjä lukee tällä hetkellä
+  - kirjat, jotka käyttäjä on jo lukenut
+- Käyttäjä voi lisätä uuden kirjan valitsemaansa kirjahyllyym
+- Käyttäjä voi poistaa kirjan listasta
+- Käyttäjä voi kirjautua ulos järjestelmästä
 
 ## Jatkokehitysideoita
+
+Sovellusta voisi vielä laajentaa esim. seuraavilla toiminnallisuuksilla:
 
 - Kirjan siirto listasta toiseen, esim. lukemassa -> luettu
 - Kirjojen haku hakusanan, genren, kirjailijan jne. avulla
