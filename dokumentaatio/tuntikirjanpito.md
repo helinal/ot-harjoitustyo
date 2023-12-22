@@ -11,4 +11,5 @@
 | 5.12   | 5    | Kirjahyllyjen toteutuksen viimeistely, sovelluksen ulkonäön hiominen, testien teko BookRepository-luokalle, dokumentoinnin päivitys, sekvenssikaavion luominen| 
 | 11.12. | 4,5  | Kirjojen poistamistoiminnon toteutus, tkinterin kanssa tuskailu ja sovelluksen ulkonäön muokkaus, kirjojen lisäämiseen liittyvän bugin korjaus, dokumentaation päivitys |
 | 12.12  | 1,5  | Docstringin lisäys, dokumentaation päivitys mm. käyttöohjeen sekä arkkitehtuurikuvauksen osalta |
-| yht    | 25,5 | | 
+| 22.12  | 5    | Loppujen docstringien lisäys, testidokumentin luominen ja muun dokumentaation päivitys, viimeiset viimeistelyt sovellukseen |
+| yht    | 30,5 | | 
