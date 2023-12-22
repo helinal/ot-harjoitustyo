@@ -27,3 +27,11 @@
 - Käyttäjä voi poistaa kirjoja kirjahyllyistä
 - Korjattu kirjan lisääminen kirjahyllyyn - lisääminen toimii nyt oletetusti
 - Hiottu sovelluksen pääsivun ulkonäköä
+
+## Viikko 7
+
+- Lisätty validointia sovellukseen:
+  - Title ei saa olla tyhjä
+  - Title saa olla max 35 merkkiä pitkä
+
+
