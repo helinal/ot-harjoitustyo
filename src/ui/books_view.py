@@ -55,12 +55,14 @@ class BookListView:
         self._books.remove(book)
         self._update_books(self._books)
 
+    # ChatGPT:n avulla generoitu koodi alkaa:
     def _update_books(self, new_books):
         for widget in self._frame.winfo_children():
             widget.destroy()
 
         for book in new_books:
             self._initialize_book(book)
+    # Generoitu koodi päättyy
 
     def _initialize(self):
         self._frame = ttk.Frame(master=self._root)
@@ -134,7 +136,7 @@ class BooksView:
         reading_books = [book for book in books if int(book.bookshelf) == 2]
         read_books = [book for book in books if int(book.bookshelf) == 3]
 
-        # Destroy existing widgets in frames
+        # Generoitu koodi alkaa:
         for widget in self._want_list_frame.winfo_children():
             widget.destroy()
 
@@ -143,8 +145,8 @@ class BooksView:
 
         for widget in self._read_list_frame.winfo_children():
             widget.destroy()
-
-        # Create new instances of BookListView
+        # Generoitu koodi päättyy
+            
         self._want_book_list = BookListView(self._want_list_frame, want_books)
         self._reading_book_list = BookListView(
             self._reading_list_frame, reading_books)
