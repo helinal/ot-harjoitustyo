@@ -1,6 +1,6 @@
 # BookBuddy
 
-BookBuddy on ns. "virtuaalinen kirjahylly". Sovelluksen avulla on mahdollista pitää kirjaa luetuista, tällä hetkellä luettavista sekä vielä lukemattomista kirjoista. Sovellusta on mahdollista käyttää useampi käyttäjä, joilla kaikilla on omat kirjahyllynsä sekä kirjansa. Sovelluksen tarkempi kuvaus löytyy vaatimusmäärittelystä.
+BookBuddy on ns. "virtuaalinen kirjahylly": sovelluksen avulla on mahdollista pitää kirjaa luetuista, tällä hetkellä luettavista sekä vielä lukemattomista kirjoista. Sovellusta on mahdollista käyttää useampi käyttäjä, joilla kaikilla on omat kirjahyllynsä sekä kirjansa. Sovelluksen tarkempi kuvaus löytyy vaatimusmäärittelystä.
 
 - [Lopullinen release (loppupalautus)](https://github.com/helinal/ot-harjoitustyo/releases/tag/final)
 - [Toinen release (vko 6)](https://github.com/helinal/ot-harjoitustyo/releases/tag/viikko6)
