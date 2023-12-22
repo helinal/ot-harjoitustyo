@@ -156,7 +156,22 @@ class BooksView:
         self._reading_book_list.pack()
         self._read_book_list.pack()
 
+        if not want_books:
+            self._display_empty_message(self._want_list_frame, " No books yet")
+
+        if not reading_books:
+            self._display_empty_message(self._reading_list_frame, " No books yet")
+
+        if not read_books:
+            self._display_empty_message(self._read_list_frame, " No books yet")
+
+        # Generoitu koodi alkaa:
         self._frame.update_idletasks()
+        # Generoitu koodi päättyy
+
+    def _display_empty_message(self, frame, message):
+        empty_label = ttk.Label(master=frame, text=message)
+        empty_label.pack(fill=constants.X)
 
     def _initialize_loggedin(self):
         user_label = ttk.Label(
