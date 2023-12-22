@@ -146,7 +146,7 @@ class BooksView:
         for widget in self._read_list_frame.winfo_children():
             widget.destroy()
         # Generoitu koodi päättyy
-            
+
         self._want_book_list = BookListView(self._want_list_frame, want_books)
         self._reading_book_list = BookListView(
             self._reading_list_frame, reading_books)
