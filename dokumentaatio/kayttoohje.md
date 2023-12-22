@@ -1,5 +1,7 @@
 # Käyttöohje
 
+Lataa sovellus koneellesi lataamalla viimeisimmän releasen lähdekoodi (_Source code_, Assets-osion alla)
+
 ## Ohjelman käynnistäminen
 
 Asenna ensin ohjelman riippuvuuden komennolla
@@ -27,14 +29,14 @@ Kirjautuminen onnistuu kirjoittamalla (olemassaoleva) käyttäjätunnus ja salas
 
 ## Uuden käyttäjän luominen
 
-Kirjautumisnäkymästä pääsee rekisteröimään uuden käyttäjän painamalla _Create user_-nappia.
-Luo uusi käyttäjä syöttämällä uusi käyttäjätunnus ja salasana syötekenttiin ja painamalla _Create a new user_-nappia.
+Kirjautumisnäkymästä pääsee rekisteröimään uuden käyttäjän painamalla _Create user_ -nappia.
+Luo uusi käyttäjä syöttämällä uusi käyttäjätunnus ja salasana syötekenttiin ja painamalla _Create a new user_ -nappia.
 Jos käyttäjän luominen onnistuu, sovellus kirjautuu automaattisesti sisään uusilla tunnuksilla ja siirtyy sovelluksen 'pääsivulle'.
 
 ## Uuden kirjan lisääminen kirjahyllyyn
 
 Kirjautunut käyttäjä voi lisätä uuden kirjan yhteen kolmesta kirjahyllystä syöttämällä kirjan otsikon syötekenttään,
-valitsemalla valikosta yhden kolmesta kirjahyllystä ja painamalla _Add a new book_-nappia.
+valitsemalla valikosta yhden kolmesta kirjahyllystä ja painamalla _Add a new book_ -nappia.
 
 ## Kirjan poistaminen kirjahyllystä
 
