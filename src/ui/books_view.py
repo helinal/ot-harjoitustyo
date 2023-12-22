@@ -160,7 +160,8 @@ class BooksView:
             self._display_empty_message(self._want_list_frame, " No books yet")
 
         if not reading_books:
-            self._display_empty_message(self._reading_list_frame, " No books yet")
+            self._display_empty_message(
+                self._reading_list_frame, " No books yet")
 
         if not read_books:
             self._display_empty_message(self._read_list_frame, " No books yet")
@@ -295,9 +296,10 @@ class BooksView:
             book_service.create_book(book_title, bookshelf)
             self._initialize_book_list()
             self._create_book_entry.delete(0, constants.END)
-    
+
     def _validate_book_title(self, title):
         if len(title) == 0:
-            raise ValueError(f"The title cannot be empty, please try again") 
+            raise ValueError(f"The title cannot be empty, please try again")
         elif len(title) > self.max_title_length:
-            raise ValueError(f"Book title cannot exceed {self.max_title_length} characters")
+            raise ValueError(
+                f"Book title cannot exceed {self.max_title_length} characters")
