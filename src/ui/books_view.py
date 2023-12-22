@@ -3,7 +3,18 @@ from services.book_service import book_service
 
 
 class BookListView:
+    """Sovelluksen 'main pagesta' ja kirjojen lisauksesta vastaava näkymä."""
+
     def __init__(self, root, books):
+        """Luokan konstruktori, joka luo uuden päänäkymän.
+
+        Args:
+            root: 
+                Tkinter-elementti, jonka sisään näkymä alustetaan
+            books:
+                Lista Book-olioita, jotka näytetään näkymässä.
+        """
+
         self._root = root
         self._books = books
         self._frame = None
@@ -11,9 +22,11 @@ class BookListView:
         self._initialize()
 
     def pack(self):
+        """Näyttää näkymän."""
         self._frame.pack()
 
     def destroy(self):
+        """Tuhoaa näkymän."""
         self._frame.destroy()
 
     def _initialize_book(self, book):
@@ -57,7 +70,17 @@ class BookListView:
 
 
 class BooksView:
+    """Kirjojejn listauksesta ja kirjahyllyihin lisäämisestä vastaava näkymä."""
+
     def __init__(self, root, handle_logout):
+        """Luokan konstruktori, joka luo uuden kirjanäkymän.
+
+        Args:
+            root:
+                Tkinter-elementti, jonka sisään näkymä alustetaan.
+            handle_logout:
+                Arvo, jota kutsutaan, kun kirjaudutaan ulos.
+        """
         self._root = root
         self._frame = None
         self._handle_logout = handle_logout
@@ -72,6 +95,14 @@ class BooksView:
         self._read_book_list = None
 
         self._initialize()
+
+    def pack(self):
+        """Näyttää näkymän."""
+        self._frame.pack(fill=constants.X)
+
+    def destroy(self):
+        """Tuhoaa näkymän."""
+        self._frame.destroy()
 
     def _initialize(self):
         self._frame = ttk.Frame(master=self._root)
@@ -91,12 +122,6 @@ class BooksView:
         self._frame.grid_columnconfigure(0, weight=1)
         self._frame.grid_columnconfigure(1, weight=0)
         self._frame.grid_columnconfigure(2, weight=0)
-
-    def pack(self):
-        self._frame.pack(fill=constants.X)
-
-    def destroy(self):
-        self._frame.destroy()
 
     def _logout_handler(self):
         book_service.logout()

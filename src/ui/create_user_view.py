@@ -3,7 +3,21 @@ from services.book_service import book_service, UsernameExistsError
 
 
 class CreateUserView:
+    """Rekisteröitymisestä vastaava näkymä.
+    """
+
     def __init__(self, root, handle_create_user, handle_show_login_view):
+        """Luokan konstruktori, joka luo uuden rekisteröitymisnäkymän.
+
+        Args:
+            root :
+                Tkinter-elementti, jonka sisään näkymä alustetaan.
+            handle_create_user:
+                Arvo, jota kutsutaan, kun käyttäjä luodaan.
+                Argumentteina käyttäjätunnus ja salasana.
+            handle_show_login_view: 
+                Arvo, jota kutsutaan, kun siirrytään takaisin kirjautumisnäkymään.
+        """
         self._root = root
         self._handle_create_user = handle_create_user
         self._handle_show_login_view = handle_show_login_view
@@ -16,9 +30,11 @@ class CreateUserView:
         self._initialize()
 
     def pack(self):
+        """Näyttää näkymän."""
         self._frame.pack(fill=constants.X)
 
     def destroy(self):
+        """Tuhoaa näkymän."""
         self._frame.destroy()
 
     def _create_user_handler(self):

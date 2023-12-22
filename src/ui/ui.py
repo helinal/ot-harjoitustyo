@@ -4,12 +4,19 @@ from ui.create_user_view import CreateUserView
 
 
 class UI:
+    """Käyttöliittymöstä vastaava luokka."""
 
     def __init__(self, root):
+        """Luokan konstruktori, joka luo uuden käyttöliittymästä vastaavan luokan.
+
+        Args:
+            root: Tkinter-elementti, jonka sisään käyttöliittymä alustetaan.
+        """
         self._root = root
         self._current_view = None
 
     def start(self):
+        """Käynnistää käyttöliittymän."""
         self._show_login_view()
 
     def _show_login_view(self):
