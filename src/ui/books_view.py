@@ -1,4 +1,4 @@
-from tkinter import ttk, constants, StringVar
+from tkinter import ttk, constants, StringVar, messagebox
 from services.book_service import book_service
 
 
@@ -264,11 +264,25 @@ class BooksView:
     def _set_selected_shelf(self, value):
         self._selected_shelf = value
 
+    max_title_length = 35
+
     def _handle_create_book(self):
         book_title = self._create_book_entry.get()
         bookshelf = self._selected_shelf
+
+        try:
+            self._validate_book_title(book_title)
+        except ValueError as e:
+            messagebox.showerror("Error", str(e))
+            return
 
         if book_title and bookshelf:
             book_service.create_book(book_title, bookshelf)
             self._initialize_book_list()
             self._create_book_entry.delete(0, constants.END)
+    
+    def _validate_book_title(self, title):
+        if len(title) == 0:
+            raise ValueError(f"The title cannot be empty, please try again") 
+        elif len(title) > self.max_title_length:
+            raise ValueError(f"Book title cannot exceed {self.max_title_length} characters")
